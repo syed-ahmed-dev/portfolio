@@ -32,21 +32,21 @@ function Project() {
                 <p>Kacheri Law appears to be a legal services platform. If you're looking at it from a developer’s perspective, you might be interested in how the website is built, its tech stack, APIs, or any automation it uses. Let me know if you need insights into its structure, performance, or any integrations!</p>
             </div>
             <div className="project">
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><h2>Datum: Integrated Learning Platform</h2></a>
-                <p>This is an online educational platform that provides high-quality, data science-focused learning resources in the Japanese language. I created the entire platform from scratch using Ruby on Rails.</p>
+                <a href="https://crownsolarenergy.com/" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://crownsolarenergy.com/" target="_blank" rel="noreferrer"><h2>Crown Solar Energy</h2></a>
+                <p>Crown Solar Energy offers cutting-edge solar solutions, including high-efficiency panels, inverters, and batteries. Developers can explore their API integrations and technical resources at</p>
             </div>
             <div className="project">
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><h2>WeManage: Real Estate Asset Management</h2></a>
-                <p>This mobile application allows realtors in Japan to securely manage their property information and view future income predictions. This app is built with Ruby on Rails and JavaScript.</p>
+                <a href="https://allalert.com/" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://allalert.com/" target="_blank" rel="noreferrer"><h2>AllAlert</h2></a>
+                <p>Currently, AllAlert does not provide publicly accessible developer resources, such as APIs or SDKs, for third-party integration. Their offerings are primarily consumer-focused, including the smart emergency wristband and GPS locator app. For any specific development or integration inquiries, it's advisable to contact AllAlert directly through their official website.</p>
             </div>
             <div className="project">
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><h2>COVID-19 Case Management</h2></a>
-                <p>Built official charts for COVID/vaccination tracking for an educational institution using JavaScript and the Google Sheets API v4. The dashboard served the university's leadership in their decision-making processes.</p>
+                <a href="https://teraride.co/" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
+                <a href="https://teraride.co/" target="_blank" rel="noreferrer"><h2>Teraride</h2></a>
+                <p>TeraRide is a transportation service that provides comfortable and affordable shuttle rides in areas like North Miami Beach, Aventura, and Sunny Isles. They aim to modernize public transport by offering convenient and cost-effective ride options.</p>
             </div>
-            <div className="project">
+            {/* <div className="project">
                 <a href="https://github.com/syed-ahmed-dev/multi-reg-analysis" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/syed-ahmed-dev/multi-reg-analysis" target="_blank" rel="noreferrer"><h2>Multiple Regression Property Analysis</h2></a>
                 <p>Analyzed the real estate market in Japan and predicted property prices by implementing statistical methods such as OLS and multi-regression analysis. This project leveraged Python and various libraries such as Pandas, NumPy, Matplotlib, and Scikit-Learn.</p>
@@ -65,7 +65,7 @@ function Project() {
                 <a href="https://github.com/syed-ahmed-dev/submeowrine" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
                 <a href="https://github.com/syed-ahmed-dev/submeowrine" target="_blank" rel="noreferrer"><h2>Submeowrine</h2></a>
                 <p>Developed and released an Android mobile application using Java and Android Studio that runs a 2D shooting game.</p>
-            </div>
+            </div> */}
         </div>
     </div>
     );
