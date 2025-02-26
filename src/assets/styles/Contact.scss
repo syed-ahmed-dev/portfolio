@@ -46,3 +46,8 @@ form {
   width: 100% !important;
   margin-bottom: 15px !important;
 }
+input, textarea {
+  color: black !important;
+  // background-color: white !important;
+  z-index: 10;
+}

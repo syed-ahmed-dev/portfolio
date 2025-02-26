@@ -1,10 +1,13 @@
 import React, { useRef, useState } from 'react';
 import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import TextField from '@mui/material/TextField';
+import Snackbar from '@mui/material/Snackbar';
+import Alert from '@mui/material/Alert';
+
 
 function Contact() {
 
@@ -16,7 +19,15 @@ function Contact() {
   const [emailError, setEmailError] = useState<boolean>(false);
   const [messageError, setMessageError] = useState<boolean>(false);
 
-  const form = useRef();
+  const form = useRef<HTMLFormElement | null>(null);
+
+  const [open, setOpen] = useState(false);
+  const [alertType, setAlertType] = useState<'success' | 'error'>('success');
+  const [alertMessage, setAlertMessage] = useState('');
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const sendEmail = (e: any) => {
     e.preventDefault();
@@ -25,42 +36,56 @@ function Contact() {
     setEmailError(email === '');
     setMessageError(message === '');
 
-    /* Uncomment below if you want to enable the emailJS */
+    if (name !== '' && email !== '' && message !== '') {
+      var templateParams = {
+        name: name,
+        email: email,
+        message: message,
+      };
 
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
+      console.log(templateParams);
 
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
+      // emailjs
+      //   emailjs.send('service_id', 'template_id', templateParams, 'api_key')
+      //   .then(
+      //     (response) => {
+      //       console.log('SUCCESS!', response.status, response.text);
+      //       setAlertType('success');
+      //       setAlertMessage('Email sent successfully! 🎉');
+      //       setOpen(true);
+      //     },
+      //     (error) => {
+      //       console.log('FAILED...', error);
+      //       setAlertType('error');
+      //       setAlertMessage('Failed to send email. Please try again. 😞');
+      //       setOpen(true);
+      //     }
+      //   );
+
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
   };
+
 
   return (
     <div id="contact">
+      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity={alertType} sx={{ width: '100%' }}>
+          {alertMessage}
+        </Alert>
+      </Snackbar>
       <div className="items-container">
         <div className="contact_wrapper">
           <h1>Contact Me</h1>
           <p>Got a project waiting to be realized? Let's collaborate and make it happen!</p>
           <Box
-            ref={form}
             component="form"
+            ref={form}
             noValidate
             autoComplete="off"
-            className='contact-form'
+            className="contact-form"
           >
             <div className='form-flex'>
               <TextField
