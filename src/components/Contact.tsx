@@ -45,22 +45,22 @@ function Contact() {
 
       console.log(templateParams);
 
-      emailjs
-        .send('service_eg823ki', 'template_jdjhjdc', templateParams, '54cIXBm7flQWZVlnG')
-        .then(
-          (response) => {
-            console.log('SUCCESS!', response.status, response.text);
-            setAlertType('success');
-            setAlertMessage('Email sent successfully! 🎉');
-            setOpen(true);
-          },
-          (error) => {
-            console.log('FAILED...', error);
-            setAlertType('error');
-            setAlertMessage('Failed to send email. Please try again. 😞');
-            setOpen(true);
-          }
-        );
+      // emailjs
+      //   .send('service_eg823ki', 'template_jdjhjdc', templateParams, '54cIXBm7flQWZVlnG')
+      //   .then(
+      //     (response) => {
+      //       console.log('SUCCESS!', response.status, response.text);
+      //       setAlertType('success');
+      //       setAlertMessage('Email sent successfully! 🎉');
+      //       setOpen(true);
+      //     },
+      //     (error) => {
+      //       console.log('FAILED...', error);
+      //       setAlertType('error');
+      //       setAlertMessage('Failed to send email. Please try again. 😞');
+      //       setOpen(true);
+      //     }
+      //   );
 
       setName('');
       setEmail('');
